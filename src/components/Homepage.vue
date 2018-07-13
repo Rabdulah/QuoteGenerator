@@ -1,7 +1,9 @@
 <template>
-  <div class="jumbotron vertical-center">
-    <div class="container-fluid align-middle" id = "quote-box">
-      <h1 id = "title">Inspiration Machine</h1>
+  <div class="jumbotron">
+    <h1 id="title">Inspiration Machine</h1>
+    <div class="container-fluid" id = "quote-box">
+
+      <!--<div class="main-content">-->
       <div id= "text">
         <p class="text-center">{{quote}}</p>
       </div>
@@ -15,12 +17,13 @@
       </button>
           </div>
           <div class = "col-md-2">
-      <a v-bind:href="twitterLink + quote + author " target="_blank"><button id = "tweet-quote" type = 'button' class = "btn btn-block btn-info"><i class="fab fa-twitter"></i>
+      <a v-bind:href="twitterLink + quote + author " target="_blank"><button id = "tweet-quote" type='button' class = "btn btn-block btn-info"><i class="fab fa-twitter"></i>
       Tweet quote
       </button></a>
           </div>
         </div>
-</div>
+    </div>
+    <!--</div>-->
   </div>
 </template>
 
@@ -153,30 +156,21 @@ var quoteArray = [["Life isn’t about getting and having, it’s about giving a
 </script>
 
 <style>
+  html {
+    background: #e9ecef;
+  }
 .container-fluid {
-  /*display: inline-block;*/
-  /*margin-top: 35%;*/
-}
-
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 0px;
+  margin-top: 15%;
 }
 
 #text {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 #title {
   color: #9ba3ff;
-  font-size: 4em;
-  position: absolute;
-  bottom: 500px;
-  left: 355px;
+  font-size: 4rem;
+  text-align: center;
 }
 
 </style>

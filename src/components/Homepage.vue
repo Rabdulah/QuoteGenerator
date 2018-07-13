@@ -1,20 +1,21 @@
 <template>
   <div class="jumbotron vertical-center">
     <div class="container-fluid align-middle" id = "quote-box">
+      <h1 id = "title">Inspiration Machine</h1>
       <div id= "text">
         <p class="text-center">{{quote}}</p>
       </div>
       <div id = "author">
-        <p class="text-center">{{author}}</p>
+        <footer class="blockquote text-center"><cite title="Source Title">{{author}}</cite></footer>
       </div>
         <div class="row justify-content-center ">
           <div class= "col-md-2">
-      <button v-on:click="getQuote" id= "new-quote" type = 'button' class = "btn btn-block btn-primary">
+      <button v-on:click="getQuote" id= "new-quote" type = 'button' class = "btn btn-block btn-primary"><i class="fas fa-quote-left"></i>
       New Quote
       </button>
           </div>
           <div class = "col-md-2">
-      <a v-bind:href="twitterLink + quote + author " target="_blank"><button id = "tweet-quote" type = 'button' class = "btn btn-block btn-info">
+      <a v-bind:href="twitterLink + quote + author " target="_blank"><button id = "tweet-quote" type = 'button' class = "btn btn-block btn-info"><i class="fab fa-twitter"></i>
       Tweet quote
       </button></a>
           </div>
@@ -152,9 +153,6 @@ var quoteArray = [["Life isn’t about getting and having, it’s about giving a
 </script>
 
 <style>
-h1 {
-  color: #9ba3ff;
-}
 .container-fluid {
   /*display: inline-block;*/
   /*margin-top: 35%;*/
@@ -165,6 +163,20 @@ h1 {
   min-height: 100vh; /* These two lines are counted as one :-)       */
 
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  margin-bottom: 0px;
 }
+
+#text {
+  font-size: 1.5em;
+}
+
+#title {
+  color: #9ba3ff;
+  font-size: 4em;
+  position: absolute;
+  bottom: 500px;
+  left: 355px;
+}
+
 </style>
